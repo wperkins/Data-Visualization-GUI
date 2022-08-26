@@ -2,7 +2,7 @@ function [p, q, u] = property()
 persistent prop
 if (isempty(prop) == 1)
     cpath = getcurrentdir();
-    fileID = fopen([cpath '\parameters.csv']);
+    fileID = fopen(fullfile(cpath, 'parameters.csv'));
     if (fileID ~= -1)
         file = textscan(fileID,'%s','delimiter','\n');
         fclose(fileID);

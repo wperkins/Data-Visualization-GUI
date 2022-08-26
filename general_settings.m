@@ -6,7 +6,7 @@ global gsettings
 cpath = getcurrentdir();
 if (w == 0)
     try
-        load([cpath '\settings.dat'],'-mat','gsettings');
+        load(fullfile(cpath, 'settings.dat'),'-mat','gsettings');
     catch
         gsettings.URL = 'http://web2.clarkson.edu/projects/airlab/software/resuspension_gui/index.html';
         gsettings.ver_URL = 'http://web2.clarkson.edu/projects/airlab/software/resuspension_gui/app_ver.txt';
@@ -31,10 +31,10 @@ if (w == 0)
         gsettings.markerfill = 0;
         gsettings.qtyrl = 1;
         gsettings.qlyrl = 0;
-        save([cpath '\settings.dat'],'gsettings')
+        save(fullfile(cpath, 'settings.dat'), 'gsettings')
     end %try
 else
-    save([cpath '\settings.dat'],'gsettings')
+    save(fullfile(cpath, 'settings.dat'), 'gsettings')
 end %if
 
 switch gsettings.markerfill

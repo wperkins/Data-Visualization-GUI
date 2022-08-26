@@ -66,7 +66,7 @@ guidata(hObject, handles);
 
 cpath = getcurrentdir();
 if isdeployed
-    diary([cpath '\ErrorLog.log']);
+    diary(fullfile(cpath, 'ErrorLog.log'));
 end %if
 
 set(handles.text1,'string','0')

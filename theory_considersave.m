@@ -41,6 +41,6 @@ else
     materialdb.sname{end+1} = sname;
     materialdb.mname{end+1} = mname;
     materialdb.mdb{end+1} = dbget(:,2:end);
-    save([cpath '\matdb.dat'],'materialdb')
+    save(fullfile(cpath, 'matdb.dat'), 'materialdb')
     msgbox({'New record has been saved in Database:',[pname ' - ' sname ' (' mname ')']},'Database','help','modal');
 end %if

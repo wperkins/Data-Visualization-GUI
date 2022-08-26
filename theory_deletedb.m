@@ -23,7 +23,7 @@ switch choice
         materialdb.sname(s) = [];
         materialdb.mname(s) = [];
         materialdb.mdb(s) = [];
-        save([cpath '\matdb.dat'],'materialdb')
+        save(fullfile(cpath, 'matdb.dat'), 'materialdb')
         msgbox([num2str(length(s)) ' record(s) was deleted.'],'Database','help','modal');
     case 'No'
         return
